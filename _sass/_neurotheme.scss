@@ -1,0 +1,150 @@
+/* ==========================================================================
+   Neuroscience Theme Enhancements
+   Adds colorful accents, gradient masthead, hero splash with brain motif
+   ========================================================================== */
+
+// Gradient masthead background with subtle neuron pattern
+.masthead {
+  background: linear-gradient(135deg, rgba(109,40,217,0.08), rgba(6,182,212,0.08));
+  backdrop-filter: saturate(120%) blur(0px);
+  border-bottom: 1px solid rgba(109,40,217,0.15);
+}
+
+.masthead__menu-item--lg a {
+  font-weight: 700;
+}
+
+// Fancy link underline
+a {
+  text-decoration: none;
+  background-image: linear-gradient(120deg, rgba($info-color, .3) 0%, rgba($info-color, .3) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size .25s ease-in-out, color .25s ease-in-out;
+
+  &:hover {
+    color: mix(#000, $info-color, 15%);
+    background-size: 100% 88%;
+  }
+}
+
+// Hero splash with brain SVG
+.neuro-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 3rem 1rem;
+  border-radius: 16px;
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(6,182,212,0.12), transparent 60%),
+              radial-gradient(800px 500px at 110% 10%, rgba(109,40,217,0.12), transparent 60%),
+              linear-gradient(180deg, #fff, #fff);
+  box-shadow: 0 10px 30px rgba(109,40,217,0.08);
+}
+
+.neuro-hero__title {
+  font-family: $header-font-family;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 .5rem 0;
+}
+
+.neuro-hero__subtitle {
+  color: $gray;
+  font-size: 1.05rem;
+}
+
+.neuro-hero__cta {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+.btn--neuro {
+  background: linear-gradient(135deg, $primary-color, $info-color);
+  color: #fff !important;
+  border: none;
+  box-shadow: 0 8px 16px rgba(109,40,217,0.25);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: $primary-color !important;
+  border: 2px solid rgba($primary-color, .3);
+}
+
+.neuro-hero__art {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .neuro-hero {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .neuro-hero__art {
+    max-width: 320px;
+  }
+}
+
+// Section dividers with wave/axon motif
+.neuro-divider {
+  --c1: #{rgba($primary-color, .25)};
+  --c2: #{rgba($info-color, .25)};
+  height: 14px;
+  background: linear-gradient(90deg, var(--c1), var(--c2));
+  mask: url('/assets/svg/neuron-wave.svg') repeat-x center / contain;
+  -webkit-mask: url('/assets/svg/neuron-wave.svg') repeat-x center / contain;
+  opacity: .8;
+}
+
+// Subtle background pattern option on body
+body.neuro-pattern {
+  background-image: url('/assets/svg/neuron-pattern.svg');
+  background-size: 360px;
+  background-attachment: fixed;
+  background-position: top left;
+}
+
+// Cards
+.archive .archive__item {
+  border: 1px solid rgba($primary-color, .15);
+  border-radius: 12px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.archive .archive__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(17,24,39,0.08);
+}
+
+// Footer accent
+.page__footer {
+  background: linear-gradient(180deg, rgba(109,40,217,0.06), rgba(6,182,212,0.06));
+}
+
+// Simple features grid
+.feature__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.feature__item {
+  padding: 1.25rem;
+  border: 1px solid rgba($primary-color, .15);
+  border-radius: 12px;
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .feature__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
