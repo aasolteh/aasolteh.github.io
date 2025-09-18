@@ -10,8 +10,7 @@
  *
 */
 
-/* media query mixins */
-@import "vendor/breakpoint/breakpoint";
+@import "vendor/breakpoint/breakpoint"; // media query mixins
 @import "variables";
 @import "mixins";
 @import "vendor/susy/susy";
@@ -34,7 +33,6 @@
 @import "page";
 @import "archive";
 @import "sidebar";
-@import "neurotheme";
 
 @import "vendor/font-awesome/fontawesome";
 @import "vendor/font-awesome/solid";
