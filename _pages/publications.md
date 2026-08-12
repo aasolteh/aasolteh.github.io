@@ -9,6 +9,13 @@ You can also find my articles on <a href="https://scholar.google.com/citations?u
 
 {% include base_path %}
 
+<h2>Preprints</h2>
+{% for post in site.publications reversed %}
+  {% if post.type == 'preprint' %}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
+
 <h2>Journal Articles</h2>
 {% for post in site.publications reversed %}
   {% if post.type == 'journal' %}

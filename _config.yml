@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Amirali Soltani Tehrani"
 title_separator          : "-"
 name                     : &name "Amirali Soltani Tehrani "
-description              : &description "Research Assistant at BCoL"
+description              : &description "Ph.D. student in cognitive neuroscience and vision science"
 url                      : https://aasolteh.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "aasolteh.github.io"
@@ -51,12 +51,12 @@ analytics:
 author:
   name             : "Amirali Soltani Tehrani"
   avatar           : "amirali2.jpg"
-  bio              : "Neuroscience Enthusiast!"
-  location         : "Tehran, Iran"
-  employer         :
+  bio              : "Ph.D. student studying visual perception and object representations."
+  location         : "Newark, DE"
+  employer         : "University of Delaware"
   pubmed           :
   googlescholar    : https://scholar.google.com/citations?user=n0WbtPYAAAAJ&hl=en
-  email            : "aa.soltanitehrani@gmail.com"
+  email            : "aasolteh@udel.edu"
   researchgate     :  https://www.researchgate.net/profile/Amirali-Soltani-2
   uri              :
   bitbucket        :

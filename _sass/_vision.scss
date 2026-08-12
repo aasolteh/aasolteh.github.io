@@ -1,0 +1,315 @@
+/* ==========================================================================
+   Cognitive neuroscience visual theme
+   ========================================================================== */
+
+:root {
+  --ink: #17232b;
+  --muted: #596c73;
+  --paper: #fbfcfb;
+  --surface: #ffffff;
+  --line: #d9e3df;
+  --deep-teal: #0c5c5a;
+  --teal: #177e7b;
+  --moss: #6e8b55;
+  --plum: #6c4f7d;
+  --amber: #c18435;
+}
+
+body {
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(23, 126, 123, 0.07) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(108, 79, 125, 0.05) 1px, transparent 1px),
+    var(--paper);
+  background-size: 56px 56px;
+}
+
+a {
+  color: var(--deep-teal);
+}
+
+.masthead {
+  position: sticky;
+  top: 0;
+  background: rgba(251, 252, 251, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.masthead__inner-wrap {
+  letter-spacing: 0;
+}
+
+.masthead__menu-item--lg a {
+  color: var(--deep-teal);
+}
+
+.greedy-nav a {
+  color: var(--ink);
+}
+
+.greedy-nav a:hover {
+  color: var(--teal);
+}
+
+#main {
+  max-width: 1180px;
+}
+
+.page,
+.archive {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(217, 227, 223, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 18px 45px rgba(23, 35, 43, 0.07);
+  padding: 1.4rem;
+}
+
+@include breakpoint($medium) {
+  .page,
+  .archive {
+    padding: 2rem;
+  }
+}
+
+.page__title,
+.archive > .page__title {
+  color: var(--ink);
+  font-size: 1.9rem;
+  letter-spacing: 0;
+}
+
+.page__content h2,
+.archive h2 {
+  color: var(--deep-teal);
+  border-bottom: 1px solid var(--line);
+}
+
+.page__content h3,
+.archive h3 {
+  color: var(--ink);
+}
+
+.btn {
+  background: var(--deep-teal);
+  border-radius: 6px;
+  box-shadow: 0 8px 22px rgba(12, 92, 90, 0.18);
+}
+
+.btn:hover {
+  background: var(--plum);
+}
+
+.btn--light {
+  color: var(--deep-teal) !important;
+  background: #eef6f2;
+  box-shadow: none;
+}
+
+.btn--light:hover {
+  color: #fff !important;
+  background: var(--plum);
+}
+
+.vision-hero {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  margin: -0.25rem 0 2rem;
+  padding: 1.25rem 0 0.5rem;
+}
+
+@include breakpoint($medium) {
+  .vision-hero {
+    grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.65fr);
+    min-height: 360px;
+  }
+}
+
+.vision-kicker {
+  color: var(--teal);
+  font-size: 0.76rem !important;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem !important;
+  text-transform: uppercase;
+}
+
+.vision-hero h1 {
+  max-width: 760px;
+  color: var(--ink);
+  font-size: 2.35rem;
+  line-height: 1.08;
+  margin-bottom: 1rem;
+}
+
+@include breakpoint($medium) {
+  .vision-hero h1 {
+    font-size: 3.1rem;
+  }
+}
+
+.vision-hero p {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 1.05rem !important;
+}
+
+.vision-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.vision-hero__signal {
+  display: none;
+  position: relative;
+  min-height: 270px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(12, 92, 90, 0.1) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(108, 79, 125, 0.08) 1px, transparent 1px),
+    #f5faf7;
+  background-size: 22px 22px;
+}
+
+@include breakpoint($medium) {
+  .vision-hero__signal {
+    display: block;
+  }
+}
+
+.vision-hero__signal:before,
+.vision-hero__signal:after,
+.vision-hero__signal span {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--teal);
+  transform-origin: left center;
+}
+
+.vision-hero__signal:before {
+  top: 28%;
+  transform: rotate(12deg);
+}
+
+.vision-hero__signal:after {
+  top: 58%;
+  background: var(--plum);
+  transform: rotate(-10deg);
+}
+
+.vision-hero__signal span:nth-child(1) {
+  top: 42%;
+  background: var(--amber);
+  transform: rotate(4deg);
+}
+
+.vision-hero__signal span:nth-child(2) {
+  top: 74%;
+  background: var(--moss);
+  transform: rotate(16deg);
+}
+
+.vision-hero__signal span:nth-child(3) {
+  top: 16%;
+  background: var(--deep-teal);
+  transform: rotate(-18deg);
+}
+
+.research-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1.25rem 0 2rem;
+}
+
+@include breakpoint($medium) {
+  .research-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.research-grid section,
+.timeline__item,
+.archive__item {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 10px 28px rgba(23, 35, 43, 0.05);
+}
+
+.research-grid section {
+  padding: 1.1rem;
+}
+
+.research-grid h3 {
+  margin-top: 0;
+  color: var(--deep-teal);
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline__item {
+  position: relative;
+  padding: 1.1rem 1.1rem 1.1rem 1.35rem;
+  border-left: 4px solid var(--teal);
+}
+
+.timeline__item h2 {
+  margin-top: 0.2rem;
+  font-size: 1.15rem;
+  border-bottom: 0;
+}
+
+.timeline__date {
+  color: var(--plum);
+  font-size: 0.82rem !important;
+  font-weight: 700;
+  margin-bottom: 0.25rem !important;
+  text-transform: uppercase;
+}
+
+.archive__item {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.archive__item-title {
+  margin-top: 0;
+}
+
+.archive__item-authors {
+  color: var(--muted);
+  font-size: 0.92rem !important;
+}
+
+.sidebar {
+  background: transparent;
+}
+
+.author__avatar img {
+  border: 3px solid #e5f0ec;
+  box-shadow: 0 10px 30px rgba(23, 35, 43, 0.12);
+}
+
+.author__name {
+  color: var(--deep-teal);
+}
+
+.author__bio {
+  color: var(--muted);
+}
+
+.author__urls li {
+  margin-bottom: 0.45rem;
+}
