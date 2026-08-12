@@ -44,9 +44,9 @@ Sep 2021 - Sep 2024
 
 ## Publications and Conferences
 
-<ul>{% for post in site.publications reversed %}
+{% for post in site.publications reversed %}
   {% include archive-single-cv.html %}
-{% endfor %}</ul>
+{% endfor %}
 
 ## Skills
 

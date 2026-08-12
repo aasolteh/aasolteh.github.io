@@ -3,6 +3,7 @@ permalink: /
 title: "Amirali Soltani Tehrani"
 excerpt: "Ph.D. student in cognitive neuroscience and vision science"
 author_profile: false
+hide_title: true
 redirect_from:
   - /about/
   - /about.html

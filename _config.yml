@@ -9,7 +9,7 @@
 locale                   : "en-US"
 title                    : "Amirali Soltani Tehrani"
 title_separator          : "-"
-name                     : &name "Amirali Soltani Tehrani "
+name                     : &name "Amirali Soltani Tehrani"
 description              : &description "Ph.D. student in cognitive neuroscience and vision science"
 url                      : https://aasolteh.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -166,14 +166,14 @@ defaults:
       type: teaching
     values:
       layout: single
-      author_profile: true
+      author_profile: false
   # _publications
   - scope:
       path: ""
       type: publications
     values:
       layout: single
-      author_profile: true
+      author_profile: false
 
 # Sass/SCSS
 sass:

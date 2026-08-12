@@ -92,7 +92,7 @@ a {
 }
 
 .page__content h2,
-.archive h2 {
+.archive > h2 {
   margin-top: 2.6rem;
   padding-bottom: 0.35rem;
   color: var(--ink);
@@ -102,7 +102,7 @@ a {
 }
 
 .page__content h3,
-.archive h3 {
+.archive > h3 {
   color: var(--ink);
   font-size: 1rem;
   font-weight: 600;
@@ -247,8 +247,10 @@ a {
 
 .timeline__item h2 {
   margin: 0.1rem 0;
+  color: var(--ink);
   border-bottom: 0;
   font-size: 1rem;
+  font-weight: 500;
 }
 
 .timeline__date {
@@ -265,6 +267,7 @@ a {
 
 .archive__item-title {
   margin-top: 0;
+  font-family: $header-font-family;
   font-size: 1.05rem;
 }
 
