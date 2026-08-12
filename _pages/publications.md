@@ -2,10 +2,10 @@
 layout: archive
 title: "Publications"
 permalink: /publications/
-author_profile: true
+author_profile: false
 ---
 
-You can also find my articles on <a href="https://scholar.google.com/citations?user=n0WbtPYAAAAJ&hl=en">my Google Scholar profile</a>.
+<p class="page-intro">Selected papers, preprints, and conference presentations. See also <a href="https://scholar.google.com/citations?user=n0WbtPYAAAAJ&hl=en">Google Scholar</a>.</p>
 
 {% include base_path %}
 
