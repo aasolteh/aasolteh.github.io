@@ -11,7 +11,7 @@ title                    : "Amirali Soltani Tehrani"
 title_separator          : "-"
 name                     : &name "Amirali Soltani Tehrani"
 description              : &description "Ph.D. student in cognitive neuroscience and vision science"
-url                      : https://aasolteh.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://aasolteh.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "aasolteh.github.io"
 teaser                   :  # filename of teaser fallback image placed in /images/
