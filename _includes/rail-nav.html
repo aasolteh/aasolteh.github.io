@@ -1,0 +1,29 @@
+{% include base_path %}
+
+{% assign after_active = false %}
+{% assign home_active = false %}
+{% assign readout = "Home" %}
+{% if page.url == "/" %}
+  {% assign home_active = true %}
+  {% assign after_active = true %}
+{% else %}
+  {% assign readout = page.title %}
+{% endif %}
+
+<nav class="railnav" aria-label="Site sections">
+  <span class="railnav__readout">{{ readout }}</span>
+  <span class="railnav__line"></span>
+  <ul class="railnav__stops">
+    <li class="railnav__stop {% if home_active %}is-active{% else %}is-visited{% endif %}">
+      <a href="{{ base_path }}/" aria-current="{% if home_active %}page{% else %}false{% endif %}"><span class="dot"></span><span class="sr-only">Home</span></a>
+    </li>
+    {% for link in site.data.navigation.main %}
+      {% assign is_active = false %}
+      {% if page.url == link.url %}{% assign is_active = true %}{% endif %}
+      <li class="railnav__stop {% if is_active %}is-active{% elsif after_active %}is-upcoming{% else %}is-visited{% endif %}">
+        <a href="{{ base_path }}{{ link.url }}" aria-current="{% if is_active %}page{% else %}false{% endif %}"><span class="dot"></span><span class="sr-only">{{ link.title }}</span></a>
+      </li>
+      {% if is_active %}{% assign after_active = true %}{% endif %}
+    {% endfor %}
+  </ul>
+</nav>
